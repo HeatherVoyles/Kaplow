@@ -1,5 +1,13 @@
 angular.module('starter.controllers', [])
 
+    .controller('LandingCtrl', function($scope,$state) {
+     $scope.landing=function () {
+        console.log ("button was clicked");
+         $state.go('tab.dispatch');
+     };
+
+    })
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('DispatchCtrl', function($scope) {})

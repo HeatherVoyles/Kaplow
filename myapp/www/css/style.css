@@ -3,3 +3,28 @@
 	width: 100%;
 	padding: 10px;
 }
+
+body{
+    background-color: #000000 !important;
+}
+
+
+.pane {
+    background-image: url('../img/kaplowdispatch.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+
+}
+
+
+.kaplow-pane{
+    background-color: #111111;
+    height: 100%;
+}
+
+p{
+    color: white;
+}
+
