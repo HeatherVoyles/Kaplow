@@ -31,8 +31,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     .state('landing', {
           url: '/landing',
-          templateUrl: 'templates/landing.html'
-
+          templateUrl: 'templates/landing.html',
+          controller: 'LandingCtrl'
 
   })
 
@@ -50,20 +50,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-dispatch': {
         templateUrl: 'templates/tab-dispatch.html',
-        controller: 'DashCtrl'
+        controller: 'LandingCtrl'
       }
     }
   })
 
-  .state('tab.dispatchform', {
-    url: '/dispatchform',
-    views: {
-      'tab-dispatchform': {
-        templateUrl: 'templates/tab-dispatchform.html',
-        controller: 'DispatchCtrl'
-      }
-    }
-  })
 
   .state('tab.chats', {
       url: '/chats',

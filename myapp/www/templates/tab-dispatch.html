@@ -19,13 +19,16 @@
     <input type="text" placeholder="Phone Number">
     </label>
     <label class="item item-input">
-    <input type="text" placeholder="Street Number">
-    </label>
-    <label class="item item-input">
-    <input type="text" placeholder="Street Name">
+    <input type="text" placeholder="Address">
     </label>
     <label class="item item-input">
     <input type="text" placeholder="Postal Code">
+    </label>
+    <label ng-controller="LandingCtrl" class="item item-input">
+        {{lat}}
+    </label>
+    <label class="item item-input">
+        {{lng}}
     </label>
 
 

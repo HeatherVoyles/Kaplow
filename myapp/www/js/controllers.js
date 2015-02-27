@@ -1,9 +1,16 @@
 angular.module('starter.controllers', [])
 
     .controller('LandingCtrl', function($scope,$state) {
+       $scope.lat=0.0; $scope.lng=0.0;
      $scope.landing=function () {
         console.log ("button was clicked");
-         $state.go('tab.dispatch');
+         navigator.geolocation.getCurrentPosition(function(position){
+             $scope.lat = position.coords.latitude;
+             $scope.lng = position.coords.longitude;
+             alert(position.coords.latitude);
+             console.log($scope);
+             $state.go('tab.dispatch', { updated: true });
+         });
      };
 
     })
@@ -45,9 +52,6 @@ angular.module('starter.controllers', [])
 
         }
     })
-
-
-
 
 
                                                                                                                                                                                                                                                                                                                                                              v
