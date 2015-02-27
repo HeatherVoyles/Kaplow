@@ -21,23 +21,23 @@
 15 verbose addNameRange registry:https://registry.npmjs.org/ionic not in flight; fetching
 16 verbose request uri https://registry.npmjs.org/ionic
 17 verbose request no auth needed
-18 info attempt registry request try #1 at 3:21:53 PM
-19 verbose request id bad2088f6fce3dec
-20 verbose etag "O1Z1CUAV6X7DT5WFVSOM7O7G"
+18 info attempt registry request try #1 at 9:04:45 AM
+19 verbose request id 036b6ca9dbc0b6f0
+20 verbose etag "9TFPG8DCBK8D6CT2GA9STOBXQ"
 21 http request GET https://registry.npmjs.org/ionic
 22 http 304 https://registry.npmjs.org/ionic
 23 silly get cb [ 304,
-23 silly get   { date: 'Wed, 18 Feb 2015 19:21:54 GMT',
+23 silly get   { date: 'Fri, 27 Feb 2015 13:04:46 GMT',
 23 silly get     server: 'Apache',
 23 silly get     via: '1.1 varnish',
-23 silly get     'last-modified': 'Wed, 18 Feb 2015 19:21:54 GMT',
+23 silly get     'last-modified': 'Fri, 27 Feb 2015 13:04:46 GMT',
 23 silly get     'cache-control': 'max-age=60',
-23 silly get     etag: '"O1Z1CUAV6X7DT5WFVSOM7O7G"',
-23 silly get     age: '2',
-23 silly get     'x-served-by': 'cache-atl6225-ATL',
-23 silly get     'x-cache': 'HIT',
-23 silly get     'x-cache-hits': '1',
-23 silly get     'x-timer': 'S1424287314.403305,VS0,VE3',
+23 silly get     etag: '"9TFPG8DCBK8D6CT2GA9STOBXQ"',
+23 silly get     age: '0',
+23 silly get     'x-served-by': 'cache-dfw1829-DFW',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1425042286.008451,VS0,VE509',
 23 silly get     vary: 'Accept',
 23 silly get     'content-length': '0',
 23 silly get     'keep-alive': 'timeout=10, max=50',
@@ -169,7 +169,9 @@
 27 silly addNameRange     '1.3.9',
 27 silly addNameRange     '1.3.10',
 27 silly addNameRange     '1.4.0-alpha.1',
-27 silly addNameRange     '1.3.11' ] ]
+27 silly addNameRange     '1.3.11',
+27 silly addNameRange     '1.3.1-1.alpha.0',
+27 silly addNameRange     '1.4.0-alpha.2' ] ]
 28 verbose addNamed ionic@1.3.11
 29 silly addNamed semver.valid 1.3.11
 30 silly addNamed semver.validRange 1.3.11
