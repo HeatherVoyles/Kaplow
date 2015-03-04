@@ -1,7 +1,58 @@
 angular.module('starter.controllers', [])
 
+    .controller('LandingCtrl', function($scope,$state) {
+        navigator.geolocation.getCurrentPosition(function(position){
+            $scope.lat = position.coords.latitude;
+            $scope.lng = position.coords.longitude;
+        });
+
+     $scope.landing=function () {
+        console.log ("button was clicked");
+             $state.go('tab.dispatch');
+     };
+
+    })
+
 .controller('DashCtrl', function($scope) {})
 
+.controller('DispatchCtrl', function($scope) {})
+
+
+    .controller('LocationCtrl', function($scope, $state) {
+
+        // PLEASE NOTE:  you must install the apache cordova geolocation plugin for this to function.
+        // You can install it with the following command:  ionic plugin add org.apache.cordova.geolocation
+
+        $scope.locationString = "Please click the button above to get your location.";
+
+        // this function is bound to the button on the location page which gets the current location
+        $scope.getCurrentLocation = function() {
+
+            // ensure that the geolocator is available
+            // on error, send the appropriate message
+            if (navigator.geolocation) {
+
+                // this function gets the current location of the device
+                // the current location will be stored in the position attribute variable
+                // the device latitude and longitude are located in the position.coords array
+                navigator.geolocation.getCurrentPosition(function(position) {
+
+                    // get the latitude and longitude and create a string displaying everything
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+                    $scope.locationString = 'Your current location is... Latitude: '+lat+' and Longitude: '+lng;
+                    $state.go('tab.location');
+                });
+            } else {
+                $scope.locationString = "Sorry, but the computer Gremlins struck again!  Yell at Rob!";
+                $state.go('tab.location');
+            }
+
+        }
+    })
+
+
+                                                                                                                                                                                                                                                                                                                                                             v
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
@@ -26,3 +77,8 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 });
+
+
+
+
+
