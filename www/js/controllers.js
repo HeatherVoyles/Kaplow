@@ -4,6 +4,7 @@ angular.module('starter.controllers', [])
         navigator.geolocation.getCurrentPosition(function(position){
             $scope.lat = position.coords.latitude;
             $scope.lng = position.coords.longitude;
+
         });
 
      $scope.landing=function () {
