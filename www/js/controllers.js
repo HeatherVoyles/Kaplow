@@ -5,6 +5,32 @@ angular.module('starter.controllers', [])
         navigator.geolocation.getCurrentPosition(function(position){
             $scope.data.lat = position.coords.latitude;
             $scope.data.lng = position.coords.longitude;
+
+            $http.post("http://104.131.181.179/dispatch", { fname: $scope.data.fname, lname: $scope.data.lname, phone: $scope.data.phone, postalcode: $scope.data.postalcode, plowtype: $scope.data.plowtype, plowtime: $scope.data.plowtime, notes: $scope.data.notes, email: $email.data.email })
+            if (result.data.dispatchstatus == "success") {
+
+    /*AM I SUPPOSED TO COPY THE ALERT AND ELSE AND ERROR FUNCTION FROM THE OLATH TUTORIAL TOO? What goes in place
+    of "loginstatus"? "Dispatch"?}
+
+              if (result.data.loginstatus == "success") {
+
+                // successful login, in our example, we will just send an alert message
+                alert("Congrats, you logged in with user ID "+result.data.userid);
+
+              }
+              else {
+
+               // unsuccessful login.  In our example, we are just sending an alert message
+               alert(result.data.message);
+            }
+        }, function(error) {
+            alert("There was a problem getting your profile.  Check the logs for details.");
+            console.log(error);
+        });
+     }
+
+
+     */
 /*
             var geocoderProvider = 'google';
             var httpAdapter = 'http';
