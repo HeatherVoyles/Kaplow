@@ -5,26 +5,33 @@
 }
 
 body{
-    background-color: #000000 !important;
+    background-color: #FFFFFF !important;
 }
 
 
 .pane {
     background-image: url('../img/kaplowdispatch.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    background-size: 100%;
+    background-color: #ff440a;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;*/
 
 }
 
 
 .kaplow-pane{
-    background-color: #111111;
+    background-color: #FFFFFF;
     height: 100%;
 }
 
 p{
-    color: white;
+    color: #000000;
 }
+
+.kaplow-faqs{
+    padding: 0px 10px;
+}
+
+
 

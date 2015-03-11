@@ -26,35 +26,37 @@
     <label class="item item-input">
     <input type="text" name="postalcode" placeholder="Postal Code">
     </label>
+    <label class="item item-input">
+        <input type="text" name="email" placeholder="Email Address">
+    </label>
 
-    <input type="" name="lat" id="lat" value={{lat}} />
-    <input type="hidden" name="lng" id="lng" value={{lng}} />
-
-
-
-   
-  
  <label class="item item-input item-select">
     <div class="input-label">
       Type of Plow
     </div>
     <select name="plowtype">
-      <option value="driveway" selected>Driveway</option>
-      <option value="lot"> Parking Lot</option>
-      <option value ="privatestreet" Private Street</option>
+      <option value="driveway" selected>Driveway: 40.00</option>
+      <option value="lot"> Parking Lot: 100.00</option>
+      <option value ="privatestreet"> Private Street: 150.00</option>
     </select>
   </label>
-<label class="item item-input">
-    <input type="text" name="notes" placeholder="Notes">
+
+    <label class="item item-input item-select">
+        <div class="input-label">
+            Ideal Time of Plow
+        </div>
+        <select name="plowtime">
+            <option value="ASAP" selected>ASAP</option>
+            <option value="Between95">Between 9am-5pm</option>
+            <option value ="After6pm">After 6pm</option>
+            <option value ="Roosters">When Roosters Crow</option>
+        </select>
     </label>
 
-
     <label class="item item-input">
-    <input type="text" name="plowtime" placeholder="Ideal Time for Plow">
-  </label>
-</div>
+        <input type="text" name="notes" placeholder="Special Instructions">
+    </label>
 
-<div class="button-wrapper">
   <button class="button button-block button-positive">
     Submit 
   </button>

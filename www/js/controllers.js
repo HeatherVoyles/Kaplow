@@ -1,10 +1,24 @@
 angular.module('starter.controllers', [])
 
     .controller('LandingCtrl', function($scope,$state) {
+        $scope.data = {};
         navigator.geolocation.getCurrentPosition(function(position){
-            $scope.lat = position.coords.latitude;
-            $scope.lng = position.coords.longitude;
+            $scope.data.lat = position.coords.latitude;
+            $scope.data.lng = position.coords.longitude;
+/*
+            var geocoderProvider = 'google';
+            var httpAdapter = 'http';
+            var extra = {
+                apiKey: 'AlzaSyBXLeSAbUyGcFUnT6zWyTldSCPmZDDYpk', // for Mapquest, OpenCage, Google Premier
+                formatter: null         // 'gpx', 'string', ...
+            };
 
+            var geocoder = require('node-geocoder').getGeocoder(geocoderProvider, httpAdapter, extra);
+
+            geocoder.reverse(position.coords.latitude, position.coords.longitude, function(err, res) {
+                console.log(res);
+                alert(JSON.stringify(res));
+            });*/
         });
 
      $scope.landing=function () {
@@ -53,8 +67,7 @@ angular.module('starter.controllers', [])
     })
 
 
-                                                                                                                                                                                                                                                                                                                                                             v
-.controller('ChatsCtrl', function($scope, Chats) {
+    .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
